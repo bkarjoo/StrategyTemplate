@@ -12,7 +12,8 @@ time.sleep(1)
 s.start()
 time.sleep(5)
 s.stop()
-print 'done'
+
 
 qm.close_socket()
 em.close_socket()
+print 'done'

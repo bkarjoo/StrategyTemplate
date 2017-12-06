@@ -103,7 +103,7 @@ class Strategy(object):
                 bid = self.quotes['SPY'].get_bid()
 
                 if bid != None:
-                    self.place_order(100,'SPY', bid - 1, 'DEMOX1')
+                    self.place_order(1,'SPY', bid - 1, 'ALGOGROUP')
 
             else:
                 with self.open_orders_lock:
