@@ -3,10 +3,10 @@ a template for any strategy
 """
 import time
 from observer import *
-from hydra_quote_manager import HydraQuoteManager
-from order_factory import OrderFactory
+from HydraQuoteManager import HydraQuoteManager
+from HydraOrderFactory import HydraOrderFactory
 import threading
-from order import *
+from HydraOrder import *
 
 
 class Strategy(object):
@@ -14,7 +14,7 @@ class Strategy(object):
     def __init__(self, quoteManger, executionManager):
         self.qm = quoteManger
         self.em = executionManager
-        self.of = OrderFactory()
+        self.of = HydraOrderFactory()
         self.quotes = {}
         self.quotes_lock = threading.Lock()
         self.open_orders = {}
